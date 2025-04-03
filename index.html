@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전설 레이드 준비</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f0f1e;
+      color: #f8e6b3;
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      padding: 40px 20px;
+      background-image: url('https://www.transparenttextures.com/patterns/ancient-wall.png');
+      background-size: auto;
+      background-attachment: fixed;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ffdb7d;
+      text-shadow: 0 0 10px #c79c33, 0 0 20px #c79c33;
+    }
+    .btn, .nav-btn {
+      margin: 10px 5px;
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #c79c33;
+      color: #0f0f1e;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn:hover, .nav-btn:hover {
+      background-color: #f7b700;
+      transform: scale(1.05);
+    }
+    section {
+      display: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 12px;
+      max-width: 700px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    section.active {
+      display: block;
+    }
+    #mainNav {
+      display: none;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section id="intro" class="active">
+    <h1>📜 전설의 레이드 소환장</h1>
+    <p>선택받은 당신, 이 여정은 단순한 파티가 아닙니다.</p>
+    <p>💍 특별한 임무, 전설의 동료와 함께 떠나는 일생일대의 여정.</p>
+    <p>🎭 기대, 설렘, 미션, 음식, 웃음, 감동까지 풀패키지 제공</p>
+    <p>🕕 2025년 4월 5일 오후 6시<br>🏞 서울 어딘가의 고요한 숲 근처</p>
+    <button class="btn" onclick="startJourney()">지금, 여정을 시작합니다</button>
+  </section>
+
+  <div id="mainNav">
+    <button class="nav-btn" onclick="showSection('intro2')">🛡 인트로</button>
+    <button class="nav-btn" onclick="showSection('history')">📖 히스토리</button>
+    <button class="nav-btn" onclick="showSection('prep')">🎒 준비물</button>
+    <button class="nav-btn" onclick="showSection('map')">🗺 이동경로</button>
+    <button class="nav-btn" onclick="showSection('final')">📜 현장 퀘스트</button>
+    <button class="nav-btn" onclick="goBack()">🔙 처음으로</button>
+  </div>
+
+  <section id="intro2">
+    <h2>📢 소환장 도착!</h2>
+    <p>이 퀘스트는 오직 현장에서만 수락할 수 있습니다.</p>
+  </section>
+
+  <section id="history">
+    <h2>📖 두 영웅의 연대기</h2>
+    <p>한 명은 도파민 힐러, 다른 한 명은 잔소리 탱커.</p>
+    <p>태국, 아와오도리, 파주, 원주, 목포…</p>
+    <p>수많은 퀘스트를 함께 클리어하며, 이제 전설의 순간 앞에 도달했습니다.</p>
+  </section>
+
+  <section id="prep">
+    <h2>🎒 레이드 준비물</h2>
+    <ul>
+      <li>🧥 [에픽] 파티복 세트 (+사회성 +10)</li>
+      <li>🐽 [희귀] 1인 전용 탈것: 강철 고삐 망아지 (자가용)</li>
+      <li>🧴 [일시 효과] 매혹의 오오라 향수 (지속시간: 4시간)</li>
+      <li>💎 [고정 효과] 마음의 루비 (불굴 효과 부여)</li>
+      <li>🌈 [패시브] 도파민 버프 (+200% 설렘)</li>
+    </ul>
+  </section>
+
+  <section id="map">
+    <h2>🗺 고대의 지도가 펼쳐집니다</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.8859781314645!2d127.0005365!3d37.550263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca300927b2e07%3A0xae4981f46b905085!2z7ISc7Jq47Yq567OE7IucIOyCrOyynOq1rCDsm5DrnbzruYTrj5kgNjA!5e0!3m2!1sko!2skr!4v1681512566641!5m2!1sko!2skr" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section id="final">
+    <h2>📜 행동을 취할 시간</h2>
+    <p>이 퀘스트는 오직 현장에서만 수락할 수 있습니다.</p>
+    <p>💍 마지막 클릭은 당신의 선택에 달려있습니다.</p>
+    <button class="btn">출정 준비 완료</button>
+  </section>
+
+  <script>
+    function startJourney() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('mainNav').style.display = 'block';
+      showSection('intro2');
+    }
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    function goBack() {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById('mainNav').style.display = 'none';
+      document.getElementById('intro').style.display = 'block';
+      document.getElementById('intro').classList.add('active');
+    }
+  </script>
+</body>
+</html>
